@@ -56,6 +56,79 @@ Após isso fui organizar as pastas para inicio da tarefa, criei a pasta BEM, den
 ```
 
 ## Compilando o SASS
+
 ```
  npm run sass .\bem\main.scss .\bem\main.css
- ```
+```
+
+## Arquivo `index.html`
+
+a metodologia BEM conforme esperado.
+Veja os pontos principais:
+
+O bloco principal é .produtos.
+Cada produto usa .produtos\_\_produto.
+Elementos usam dois underlines:
+
+```
+.produtos__produto__imagem
+.produtos__produto__nome
+.produtos__produto__descricao
+```
+
+O modificador está correto:
+
+```
+.produtos__produto--destaque junto com .produtos__produto.
+```
+
+```
+<div class="produtos">
+  <div class="produtos__produto">
+    <img class="produtos__produto__imagem" src="img/perfil.png" />
+    <h4 class="produtos__produto__nome">Nome do produto</h4>
+    <p class="produtos__produto__descricao">Descrição do produto</p>
+  </div>
+  <div class="produtos__produto produtos__produto--destaque">
+    <img class="produtos__produto__imagem" src="img/perfil.png" />
+    <h4 class="produtos__produto__nome">Nome do produto</h4>
+    <p class="produtos__produto__descricao">Descrição do produto</p>
+  </div>
+  <div class="produtos__produto">
+    <img class="produtos__produto__imagem" src="img/perfil.png" />
+    <h4 class="produtos__produto__nome">Nome do produto</h4>
+    <p class="produtos__produto__descricao">Descrição do produto</p>
+  </div>
+</div>
+```
+## Arquivo ```.SCSS```
+```
+.produtos {
+  // bloco
+
+  &__produto {
+    // elemento
+
+    &__imagem { ... }
+    &__nome { ... }
+    &__descricao { ... }
+    &--destaque { ... } // modificador
+  }
+}
+```
+
+## Como resultado temos o arquivo ```main.css```
+```
+.produtos {
+  // bloco
+
+  &__produto {
+    // elemento
+
+    &__imagem { ... }
+    &__nome { ... }
+    &__descricao { ... }
+    &--destaque { ... } // modificador
+  }
+}
+```
