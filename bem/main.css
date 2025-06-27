@@ -25,7 +25,7 @@
 .produtos .produto__descricao {
   color: gray;
 }
-.produtos .em__destaque {
+.produtos .produto.em--destaque {
   /* modificador */
   border: 2px solid gold;
   padding: 8px;

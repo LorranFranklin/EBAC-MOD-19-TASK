@@ -14,12 +14,6 @@
 
   .produto {
     /* bloco */
-    &--destaque {
-    /* modificador */
-      border: 2px solid gold;
-      padding: 8px;
-      background-color: #ffff42;
-    }
 
     &__imagem {
       width: 100%;
@@ -32,6 +26,12 @@
 
     &__descricao {
       color: gray;
+    }
+    &.em--destaque {
+      /* modificador */
+      border: 2px solid gold;
+      padding: 8px;
+      background-color: #ffff42;
     }
   }
 }
